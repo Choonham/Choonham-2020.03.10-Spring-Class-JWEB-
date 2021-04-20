@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글 쓰기</title>
+</head>
+<body>
+	<form action="write.jsp" method="get">
+		<table>
+			<tr>
+				<th colspan="2">글 쓰기</th>
+			</tr>
+
+			<tr>
+				<td>제목:</td>
+				<td><input type="text" name="title" required="required" size = "48"/></td>
+			</tr>
+
+			<tr>
+				<td>내용:</td>
+				<td>
+				<textarea rows="20" cols="50" name="content" required="required">
+				</textarea>
+						</td>
+			</tr>
+
+			<tr>
+				<td>작성자:</td>
+				<td><input type="text" name="writer" required="required" size = "48" /></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2"><input type="submit" value="저장" /> 
+				<input type="button" value="취소" onClick="document.location.href = 'list.jsp'" /> <!--  input을 다음과 같이 버튼으로 만들 수도 있음 --></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
