@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+여기는 업로드 화면입니다.
+<form action = "upload.jsp" method = "get"> 
+	<table>
+				<tr align = "center">
+						<th colspan = "6">상품 등록</th>
+				</tr>
+				<tr> 
+					<td> 상품 분류 </td>
+					<td>  
+						<select name="kind">
+							<option value = "1">heals</option>
+							<option value = "2">shcakers</option>
+							<option value = "3">sandals</option>
+							<option value = "4">slippers</option>
+						</select>
+					</td>	
+				</tr>
+				<tr>
+					<td> 상품명 </td>
+					<td colspan = "4"> <input type = "text" name = "name" required = "required" size = "60"/> </td>
+				</tr>
+				<tr>
+					<td colspan = "1"> 원가[A] </td>
+					<td colspan = "1"> <input type = "text" name = "price1" required = "required"/></td>	
+					<td colspan = "1"> 판매가[B] </td>
+					<td colspan = "1"> <input type = "text" name = "price2" required = "required"/></td>	
+					<td colspan = "1"> [B-A] </td>
+					<td colspan = "1"> <input type = "text" name = "price3" required = "required"/></td>	
+				</tr>
+				<tr>
+					<td> 상세 설명 </td>
+					<td colspan = "5"> 
+						<textarea rows="20" cols="100" name="content" required="required">
+						</textarea>
+					</td>
+				</tr>
+				<tr align = "center"> 
+					<td colspan = "6"> 
+						<input type = "submit" value = "등록"/>
+						<input type = "button" value = "취소" onclick = "location.href='list.jsp'"/>
+					</td>
+				</tr>	
+	</table>
+</form>
+
+</body>
+</html>
