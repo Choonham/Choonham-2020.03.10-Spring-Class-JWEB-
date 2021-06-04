@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+* {
+	font-family: "Hi Melody";
+}
+
+textarea {
+	font-size: 16px;
+	font-weight: bold;
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boeder-left:0px; 
+	boeder-bottom:0px;
+}
+
+.input_text {
+	width: 100%;
+}
+
+input {
+	size: auto;
+	font-size: 20px;
+	font-weight: bold;
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	border-left:0px; 
+	border-bottom:0px;
+	outline: none;
+	margin: 0;	
+}
+
+.form {
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom:1px solid;
+	border-color: #979797;
+}
+
+.fileForm {
+	font-size: 20px;
+	border-bottom:1px solid;
+	border-color: #979797;
+}
+
+aside {
+	float: left;
+	padding: 10px;
+	border-right: 3px solid #979797;
+	width: 360px;
+	height: 100%;
+	text-align: center;
+}
+
+#main{
+	font-size: 36px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#most_like {
+	font-size: 26px;
+	font-weight: bold;
+	border-top: 1px solid;
+	border-bottom:1px dashed;
+	border-color: #979797;
+}
+
+#most_head {
+	font-size: 30px;
+	border-top: 3px solid;
+	border-bottom:1px solid;
+	border-color: #979797;
+}
+
+
+#comm_head {
+	font-size: 30px;
+	border-top: 3px solid;
+	border-bottom:1px solid;
+	border-color: #979797;
+}
+
+.titles {
+	background-color: #dcdcdc;
+	border-bottom: 1px solid;
+	border-color: white;
+}
+
+.myButton {
+	text-decoration: none;
+	font-size: 20;
+	font-weight: bold;
+	background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(34 34 34) 8px 5px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: rgb(0 0 0) 6px 5px 5px;
+    border-radius: 10px;
+    padding: 3px 14px;
+    cursor: pointer;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+a:link { 
+	color: red; text-decoration: none;
+}
+a:visited { 
+	color: black; text-decoration: none;
+}
+a:hover { 
+	color: blue; text-decoration: none;
+}

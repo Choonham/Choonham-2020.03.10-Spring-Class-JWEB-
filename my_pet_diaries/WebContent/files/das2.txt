@@ -1,0 +1,55 @@
+import collections
+
+import requests
+from bs4 import BeautifulSoup
+import os
+import re
+
+if __name__ == '__main__':
+    url = "https://finance.naver.com/sise/lastsearch2.nhn"
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'}
+    # token = os.getenv('1793164937:AAGUQyndXuJ65FZtkxKLkqiFvLzU2H4Ae_4')
+    # "#contentarea > div.box_type_l > table > tbody > tr:nth-child(3)"
+    # "#contentarea > div.box_type_l > table > tbody > tr:nth-child(3) > td:nth-child(2) > a"
+    response = requests.get(url, headers=headers)
+    a = 1
+    nums = collections.deque()
+    tab = "==========================="
+    if response.status_code == 200:
+        html = response.text
+        soup = BeautifulSoup(html, 'html.parser')
+        table = '#contentarea > div.box_type_l > table > tr > '
+
+        no = table + 'td.no'
+        title = table + 'td > a.tltle'
+        numbers = table + 'td.number'
+
+        no_list = soup.select(no)
+        title_list = soup.select(title)
+        number_list = soup.select(numbers)
+
+        for n in number_list:
+            if a <= 5:
+                nums.append(re.sub('[^a-z 0-9 % .+-]', '', n.get_text()))
+            a += 1
+            if a == 11:
+                a = 1
+
+        for i in range(0, 10):
+            tab += "\n"
+            tab += no_list[i].get_text()
+            tab += " | "
+            tab += title_list[i].get_text()
+            tab += " | "
+            for j in range(0,5):
+                tab += nums.popleft()
+                tab += " | "
+
+
+        print(tab)
+
+
+
+    else:
+        print(response.status_code)

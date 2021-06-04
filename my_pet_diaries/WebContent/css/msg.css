@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+* {
+	font-family: "Hi Melody";
+}
+
+input {
+	font-size: 20px;
+	font-weight: bold;
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boder-left:0px; 
+	boder-bottom:0px;
+	outline: none;
+}
+#button {
+	text-decoration: none;
+	font-size: 20;
+	font-weight: bold;
+	background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(34 34 34) 8px 5px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: rgb(0 0 0) 6px 5px 5px;
+    border-radius: 10px;
+    padding: 3px 14px;
+    cursor: pointer;
+}
+textarea{
+	font-size: 18px;
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boder-left:0px; 
+	boder-bottom:0px;
+	outline: none;
+}

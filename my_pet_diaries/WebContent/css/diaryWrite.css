@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+* {
+	font-family: "Hi Melody";
+}
+
+#photos {
+	width:  400px;
+	height: 250px;
+	border: 2px dashed rgb(0,0,0);
+	border-radius: 5%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+#pictures {
+	width: 300px;
+	text-align: center;
+	float: left;
+	vertical-align: top;
+}
+
+#form{
+	float: left;
+	padding:0;
+	margin: 0;
+	width:100px;
+}
+
+#pictureTitle {
+	font-size: 30px;
+	vertical-align: bottom;
+}
+
+#write_form{
+	border: 2px solid #979797;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+	margin-left: 180px;
+	margin-top: 20px;
+}
+input {
+	font-size: 20px;
+	font-weight: bold;
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boder-left:0px; 
+	boder-bottom:0px;
+	outline: none;
+}
+#button {
+	text-decoration: none;
+	font-size: 20;
+	font-weight: bold;
+	background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(34 34 34) 8px 5px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: rgb(0 0 0) 6px 5px 5px;
+    border-radius: 10px;
+    padding: 3px 14px;
+    cursor: pointer;
+}
+textarea{
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boder-left:0px; 
+	boder-bottom:0px;
+	outline: none;
+	font-size: 20px;
+}
+
+#isPublic {
+	margin: 0;
+	width: 100;
+	height: 30;
+    border-color: blue;
+    border-radius: 5%;
+}

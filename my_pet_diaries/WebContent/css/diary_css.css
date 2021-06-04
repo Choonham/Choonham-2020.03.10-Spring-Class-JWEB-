@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+* {
+	font-family: "Hi Melody";
+}
+
+#photos {
+	width:  400px;
+	height: 250px;
+	border: 2px dashed rgb(0,0,0);
+	border-radius: 5%;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+#pictureTitle {
+	font-size: 30px;
+	vertical-align: bottom;
+}
+
+#pictures {
+	width: 300px;
+	text-align: center;
+	float: left;
+	vertical-align: top;
+}
+
+#posts {
+	margin-top: 50px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+input {
+	border:none;
+	border-right:0px; 
+	border-top:0px; 
+	boder-left:0px; 
+	boder-bottom:0px;
+	outline: none;
+}
+
+#diary {
+	width: 55%;
+	float: left;
+	margin: 0;
+	margin-left: 10%;
+}
+
+#head {
+	font-size: 30px;
+	border-top: 3px solid;
+	border-bottom:1px solid;
+	border-color: #979797;
+}
+
+#head_date {
+	width: 20%;
+	text-align: center;
+}
+
+#head_title {
+	width: 60%;
+}
+ 
+#head_like {
+	width: 10%;
+	text-align:center;
+}
+
+#head_edit {
+	width: 10%;
+	text-align: center;
+}
+
+#td_date {
+	font-size: 22px;
+	width: 20%;
+	text-align: left;
+}
+
+#td_title {
+	font-size: 22px;
+	width: 60%;
+}
+
+#td_like {
+	font-size: 20px;
+	width: 10%;
+	text-align:center;
+}
+
+#td_edit {
+	width: 10%;
+	text-align:center;
+}
+
+.date_input{
+	font-size: 20px;
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+}
+
+.title_input{
+	font-size: 22px;
+	width: 100%;
+	text-align:center;
+	font-weight: bold;
+}
+
+.like_input{
+	font-size: 20px;
+	width: 20px;
+	text-align:center;
+	font-weight: bold;
+}
+
+.edit_img {
+	float: right;
+	margin: 0;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+#content {
+	border: 1px solid rgb(0,0,0);
+	height: 400px;
+	padding: 20px;
+}
+
+#line {
+	margin: 20px;
+	background-color:  #979797;
+	height: 5px;
+}
+
+a:link { 
+	color: red; text-decoration: none;
+}
+a:visited { 
+	color: black; text-decoration: none;
+}
+a:hover { 
+	color: blue; text-decoration: none;
+}
+
+#no_post{
+	font-size: 30px;
+	width: 700px;
+	height: 300px;
+}
+
+.myButton {
+	text-decoration: none;
+	font-size: 20;
+	font-weight: bold;
+	background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(34 34 34) 8px 5px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: rgb(0 0 0) 6px 5px 5px;
+    border-radius: 10px;
+    padding: 3px 14px;
+    cursor: pointer;
+}
+
+#numbers {
+	font-size: 20;
+	font-weight: bold;
+}
+
+#wirteButton{
+	float: right;
+	text-decoration: none;
+	font-size: 20;
+	font-weight: bold;
+	background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(34 34 34) 8px 5px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: rgb(0 0 0) 6px 5px 5px;
+    border-radius: 10px;
+    padding: 3px 14px;
+    cursor: pointer;
+}
+
+.likeList {
+	position:absolute; 
+	display:none; 
+	background-color:#ffffff; 
+ 	border:solid 2px #d0d0d0; 
+ 	width:350px; 
+ 	height:150px; 
+ 	padding:10px; }
+}
+
+.likeList div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+
+
