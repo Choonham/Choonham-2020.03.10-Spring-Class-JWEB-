@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 컨트롤러를 알려주는 역할 -->
+	<bean id="defaultHandlerMapping"  class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+	<!-- 설정 테스트 : 컨트롤러(=모델2의 액션 클래스와 비교) 페이지 이동 
+	
+	<bean name="/index.do" 
+				 class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	    <property name="viewName" value="list"></property>
+	</bean> 		
+	-->
+	
+	<!-- DB접속 방법 -> JNDI 방법 -->
+	<bean id="boardDAO" class="board.dao.BoardDAO"/>
+	
+	<!-- 1. 글 목록 보기 -->		
+	<bean name="/list.do" class="board.controller.ListActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	</bean>
+	
+	<!-- 2. 컨트롤러(=모델2의 액션 클래스) 글쓰기화면 페이지 이동-->	
+	<!--    ParameterizableViewController의 viewName 속성값을 설정하면, 
+	        콜백메서드인 handleRequestInternal() 에 의해
+            지정된 뷰명을 가지는 ModelAndView 객체를 돌려준다. -->
+	<bean name="/writeui.do" 
+			 class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	    <property name="viewName" value="write"></property>
+	</bean>
+	
+	<!-- 3. 글쓰기(글 수정하기와 거의 유사) DB연결해서-->
+	<bean name="/write.do" class="board.controller.WriteActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	    <property name="commandClass" value="board.command.BoardCommand"/>
+	</bean>
+	
+	
+	<!-- 4. 글 상세보기 -->
+	<bean name="/retrieve.do" class="board.controller.RetrieveActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	</bean>
+	
+	<!-- 5.글 수정하기 -->
+	<bean name="/update.do" class="board.controller.UpdateActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	    <property name="commandClass" value="board.command.BoardCommand"/>
+	</bean>
+	
+		
+	<!-- 6.글 삭제하기 -->
+	<bean name="/delete.do" class="board.controller.DeleteActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	</bean>
+	
+	<!-- 7.글 검색하기 -->
+	<bean name="/search.do" class="board.controller.SearchActionController">
+	    <property name="dao">
+	        <ref bean="boardDAO"/>
+	    </property>
+	</bean>
+			
+	<!-- viewResolver(위치, 이동할 페이지 지정) -->
+	<bean id="viewResolver"  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="viewClass"   value="org.springframework.web.servlet.view.InternalResourceView"/>
+	    <property name="prefix" value="/"/>
+	    <property name="suffix" value=".jsp"/>
+	</bean>
+	
+</beans>
